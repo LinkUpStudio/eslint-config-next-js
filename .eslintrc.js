@@ -41,10 +41,12 @@ module.exports = {
       "@typescript-eslint/parser": [".ts", ".tsx"],
     },
     "import/resolver": {
-      typescript: {},
+      typescript: {
+        alwaysTryTypes: true,
+      },
     },
   },
-  plugins: ["react", "react-hooks", "@typescript-eslint"],
+  plugins: ["import", "react", "react-hooks", "@typescript-eslint"],
   rules: {
     "react/jsx-filename-extension": [
       "error",
