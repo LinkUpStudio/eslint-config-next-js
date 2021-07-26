@@ -1,6 +1,6 @@
 {
   "name": "@linkup/eslint-config-next-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The LinkUp eslint configs for Next.js project",
   "main": "index.js",
   "keywords": [
