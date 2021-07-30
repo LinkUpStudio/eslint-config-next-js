@@ -14,7 +14,6 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "prettier",
   ],
-  plugins: ['prettier'],
   env: {
     browser: true,
     commonjs: true,
@@ -93,6 +92,5 @@ module.exports = {
       },
     ],
     "import/extensions": "off",
-    "prettier/prettier": "error",
   },
 };
