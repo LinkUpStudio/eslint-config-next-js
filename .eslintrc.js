@@ -92,5 +92,7 @@ module.exports = {
       },
     ],
     "import/extensions": "off",
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': 'error'
   },
 };
