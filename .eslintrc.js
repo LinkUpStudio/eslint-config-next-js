@@ -92,5 +92,36 @@ module.exports = {
       },
     ],
     "import/extensions": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "padding-line-between-statements": [
+      "error",
+      {
+        blankLine: "always",
+        prev: "*",
+        next: ["const", "let", "export"],
+      },
+      {
+        blankLine: "always",
+        prev: ["const", "let", "export"],
+        next: "*",
+      },
+      {
+        blankLine: "any",
+        prev: ["const", "let", "export"],
+        next: ["const", "let", "export"],
+      },
+      {
+        blankLine: "always",
+        prev: "*",
+        next: ["if", "class", "for", "do", "while", "switch", "case", "try"],
+      },
+      {
+        blankLine: "always",
+        prev: ["if", "class", "for", "do", "while", "switch", "case", "try"],
+        next: "*",
+      },
+      { blankLine: "always", prev: "*", next: "return" },
+    ],
   },
 };
