@@ -12,6 +12,7 @@ module.exports = {
     "plugin:import/warnings",
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended",
+    'cypress',
     "prettier",
   ],
   env: {
@@ -20,6 +21,7 @@ module.exports = {
     es6: true,
     node: true,
     jest: true,
+    'cypress/globals': true,
   },
   parserOptions: {
     ecmaVersion: 2021,
