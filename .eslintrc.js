@@ -114,14 +114,29 @@ module.exports = {
       {
         blankLine: "always",
         prev: "*",
-        next: ["if", "class", "for", "do", "while", "switch", "case", "try"],
+        next: ["if", "class", "for", "do", "while", "switch", "try", "default"],
       },
       {
         blankLine: "always",
-        prev: ["if", "class", "for", "do", "while", "switch", "case", "try"],
+        prev: ["if", "class", "for", "do", "while", "switch", "try"],
         next: "*",
       },
       { blankLine: "always", prev: "*", next: "return" },
+      {
+        blankLine: "never",
+        prev: ["case"],
+        next: ["case"],
+      },
+      {
+        blankLine: "always",
+        prev: ["block-like"],
+        next: ["case"],
+      },
+      {
+        blankLine: "always",
+        prev: ["block-like", "expression"],
+        next: ["break"],
+      }
     ],
   },
 };
