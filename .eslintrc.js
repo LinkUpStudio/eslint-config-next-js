@@ -99,7 +99,7 @@ module.exports = {
       {
         blankLine: "always",
         prev: "*",
-        next: ["const", "let", "export"]
+        next: ["const", "let", "export"],
       },
       {
         blankLine: "always",
