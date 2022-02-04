@@ -3,16 +3,14 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   extends: [
     "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "airbnb",
     "airbnb/hooks",
     "plugin:react/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
+    "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended",
-    "prettier",
+    "plugin:prettier/recommended",
   ],
   env: {
     browser: true,
@@ -63,6 +61,7 @@ module.exports = {
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
     "@typescript-eslint/no-explicit-any": "error",
+    "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
       { varsIgnorePattern: "^_", argsIgnorePattern: "^_" },
@@ -104,7 +103,7 @@ module.exports = {
       {
         blankLine: "always",
         prev: ["const", "let", "export"],
-        next: "*"
+        next: "*",
       },
       {
         blankLine: "any",
@@ -136,7 +135,7 @@ module.exports = {
         blankLine: "always",
         prev: ["block-like", "expression"],
         next: ["break"],
-      }
+      },
     ],
   },
 };
