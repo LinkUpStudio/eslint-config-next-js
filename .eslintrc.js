@@ -7,6 +7,7 @@ module.exports = {
     "airbnb",
     "airbnb/hooks",
     "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
     "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended",
@@ -93,6 +94,15 @@ module.exports = {
     "import/extensions": "off",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": "error",
+    "no-undef": "off",
+    "react/require-default-props": "off",
+    "react/function-component-definition": [
+      "error",
+      {
+        namedComponents: "arrow-function",
+      },
+      { unnamedComponents: "arrow-function" },
+    ],
     "padding-line-between-statements": [
       "error",
       {
