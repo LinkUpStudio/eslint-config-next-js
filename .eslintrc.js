@@ -100,8 +100,8 @@ module.exports = {
       "error",
       {
         namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function",
       },
-      { unnamedComponents: "arrow-function" },
     ],
     "react/jsx-fragments": ["error", "syntax"],
     "padding-line-between-statements": "off",
@@ -125,11 +125,30 @@ module.exports = {
       {
         blankLine: "always",
         prev: "*",
-        next: ["if", "class", "for", "do", "while", "switch", "try", "default", "interface"],
+        next: [
+          "if",
+          "class",
+          "for",
+          "do",
+          "while",
+          "switch",
+          "try",
+          "default",
+          "interface",
+        ],
       },
       {
         blankLine: "always",
-        prev: ["if", "class", "for", "do", "while", "switch", "try", "interface"],
+        prev: [
+          "if",
+          "class",
+          "for",
+          "do",
+          "while",
+          "switch",
+          "try",
+          "interface",
+        ],
         next: "*",
       },
       { blankLine: "always", prev: "*", next: "return" },
@@ -149,6 +168,6 @@ module.exports = {
         next: ["break"],
       },
     ],
-    "@typescript-eslint/member-ordering": 'error'
+    "@typescript-eslint/member-ordering": "error",
   },
 };
