@@ -3,16 +3,15 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   extends: [
     "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "airbnb",
     "airbnb/hooks",
     "plugin:react/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
+    "plugin:react/jsx-runtime",
+    "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended",
-    "prettier",
+    "plugin:prettier/recommended",
   ],
   env: {
     browser: true,
@@ -63,6 +62,7 @@ module.exports = {
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
     "@typescript-eslint/no-explicit-any": "error",
+    "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
       { varsIgnorePattern: "^_", argsIgnorePattern: "^_" },
@@ -94,7 +94,18 @@ module.exports = {
     "import/extensions": "off",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": "error",
-    "padding-line-between-statements": [
+    "no-undef": "off",
+    "react/require-default-props": "off",
+    "react/function-component-definition": [
+      "error",
+      {
+        namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function",
+      },
+    ],
+    "react/jsx-fragments": ["error", "syntax"],
+    "padding-line-between-statements": "off",
+    "@typescript-eslint/padding-line-between-statements": [
       "error",
       {
         blankLine: "always",
@@ -104,7 +115,7 @@ module.exports = {
       {
         blankLine: "always",
         prev: ["const", "let", "export"],
-        next: "*"
+        next: "*",
       },
       {
         blankLine: "any",
@@ -114,11 +125,30 @@ module.exports = {
       {
         blankLine: "always",
         prev: "*",
-        next: ["if", "class", "for", "do", "while", "switch", "try", "default"],
+        next: [
+          "if",
+          "class",
+          "for",
+          "do",
+          "while",
+          "switch",
+          "try",
+          "default",
+          "interface",
+        ],
       },
       {
         blankLine: "always",
-        prev: ["if", "class", "for", "do", "while", "switch", "try"],
+        prev: [
+          "if",
+          "class",
+          "for",
+          "do",
+          "while",
+          "switch",
+          "try",
+          "interface",
+        ],
         next: "*",
       },
       { blankLine: "always", prev: "*", next: "return" },
@@ -136,7 +166,16 @@ module.exports = {
         blankLine: "always",
         prev: ["block-like", "expression"],
         next: ["break"],
-      }
+      },
+    ],
+    "@typescript-eslint/member-ordering": [
+      "error",
+      {
+        interfaces: {
+          memberTypes: ["field", "signature", "method"],
+          order: "alphabetically",
+        },
+      },
     ],
   },
 };
