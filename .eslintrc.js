@@ -168,6 +168,14 @@ module.exports = {
         next: ["break"],
       },
     ],
-    "@typescript-eslint/member-ordering": "error",
+    "@typescript-eslint/member-ordering": [
+      "error",
+      {
+        interfaces: {
+          memberTypes: ["field", "signature", "method"],
+          order: "alphabetically",
+        },
+      },
+    ],
   },
 };
