@@ -105,6 +105,7 @@ module.exports = {
     ],
     "react/jsx-fragments": ["error", "syntax"],
     "padding-line-between-statements": "off",
+    "no-loss-of-precision": "off",
     "@typescript-eslint/padding-line-between-statements": [
       "error",
       {
