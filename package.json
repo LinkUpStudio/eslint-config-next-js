@@ -1,5 +1,5 @@
 {
-  "name": "@linkup/eslint-config-react",
+  "name": "@linkupst/eslint-config-react",
   "version": "1.0.7",
   "description": "The LinkUp eslint configs for React project",
   "main": "index.js",
@@ -9,7 +9,8 @@
     "next.js"
   ],
   "scripts": {
-    "preinstall": "npm install --ignore-scripts"
+    "preinstall": "npm install --ignore-scripts",
+    "test": "echo \"No test specified\""
   },
   "author": "LinkUp",
   "license": "ISC",
