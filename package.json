@@ -1,6 +1,6 @@
 {
   "name": "@linkupst/eslint-config-react",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "The LinkUp eslint configs for React project",
   "main": "index.js",
   "keywords": [
