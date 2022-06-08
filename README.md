@@ -2,10 +2,11 @@
 
 The LinkUp eslint configs for React project
 
-## Using
+## Install
+```
+yarn add -D @linkupst/eslint-config-react
+```
 
-```
-yarn add -D github:LinkUpStudioOld/eslint-config-react.git
-```
+## Using
 
 - copy [.eslintrc.js](https://gist.github.com/LinkUpStudioOld/0bb6ade36a94df73b4feab12169df052) into your project
