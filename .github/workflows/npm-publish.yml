@@ -20,5 +20,5 @@ jobs:
       - name: Create .npmrc
         run: |
         touch .npmrc
-        echo "//registry.npmjs.org/:_authToken=${{ secrets.npm_token }}" > .npmrc
+        echo "//registry.npmjs.org/:_authToken=${{ secrets.npm_token }}" >> .npmrc
       - run: npm publish
